@@ -26,7 +26,7 @@ const workoutSchema = new Schema({
     min: 1,
     max: 200
   },
-  calsburned: {
+  calsBurned: {
     type: Number,
   },
 })

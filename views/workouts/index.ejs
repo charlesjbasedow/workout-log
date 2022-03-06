@@ -1,0 +1,33 @@
+<%- include('../partials/html-head')  %> 
+<link rel="stylesheet" href="/stylesheets/workouts/index.css" />
+<%- include('../partials/nav')  %>   
+
+<main>
+<h1><%= title %> </h1>
+  <table id="list">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Duration</th>
+        <th>Type</th>
+        <th>Avg-HR</th>
+        <th>Cals-Burned</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% workouts.forEach(workout => { %>
+        <tr>
+          <td><%= workout.date %></td>
+          <td><%= workout.duration %></td>
+          <td><%= workout.type %></td>
+          <td><%= workout.avgHr %></td>
+          <td><%= workout.calsBurned %></td>
+          <td><a href="/workouts/<%= workout._id %>">Details</a></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</main>
+
+
+<%- include('../partials/footer') %>

@@ -15,4 +15,16 @@
         </button>
       </a>
     <% } %>
+    <a 
+      href="/workouts" <%- title === 'All Workouts' ? 'class="active"' : '' %>
+    >All Workouts</a>
+    <a 
+      href="/workouts/new" <%- title === 'Add Workout' ? 'class="active"' : '' %>
+    >Add Workout</a>
+    <a 
+			href="/goals/new"
+			<%- title === 'Goals' ? 'class="active"' : '' %>
+		>
+			Edit Goals
+		</a>
   </nav>

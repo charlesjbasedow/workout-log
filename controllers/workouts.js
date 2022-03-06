@@ -5,7 +5,7 @@ function index(req, res) {
   .then(workouts => {
     res.render('workouts/index', {
       workouts,
-      title: "Workout Log"
+      title: "All Workouts"
     })
   })
   .catch(err => {
@@ -26,7 +26,23 @@ function create(req, res) {
   })
 }
 
+function show(req, res) {
+  Workout.findById(req.params.id)
+  .populate("owner")
+  .then(workout => {
+    res.render('workouts/show', {
+      workout,
+      title: "Workouts"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/workouts')
+  })
+}
+
 export {
   index,
-  create
+  create,
+  show
 }

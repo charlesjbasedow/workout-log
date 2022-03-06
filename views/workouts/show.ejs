@@ -1,0 +1,20 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+  <section>
+    <div>Date: </div>
+    <div><%= workout.date %></div>
+    <div>Duration: </div>
+    <div><%= workout.duration %></div>
+    <div>Type: </div>
+    <div><%= workout.method %></div>
+    <div>Avg-HR: </div>
+    <div><%= workout.avgHr %></div>
+    <div>Cals-Burned: </div>
+    <div><%= workout.calsBurned %></div>
+  </section>
+  </main>
+
+<%- include('../partials/footer') %>

@@ -6,6 +6,8 @@ const router = Router()
 
 router.get('/', workoutsCtrl.index)
 router.post('/', workoutsCtrl.create)
+router.get('/:id', workoutsCtrl.show)
+
 
 
 

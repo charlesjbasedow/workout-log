@@ -7,7 +7,9 @@ const router = Router()
 router.get('/', workoutsCtrl.index)
 router.get('/new', isLoggedIn, workoutsCtrl.new)
 router.get('/:id', isLoggedIn, workoutsCtrl.show)
+router.get("/:id/edit", isLoggedIn, workoutsCtrl.edit)
 router.post('/', isLoggedIn, workoutsCtrl.create)
+router.put("/:id", isLoggedIn, workoutsCtrl.update)
 
 
 

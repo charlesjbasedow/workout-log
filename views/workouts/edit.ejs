@@ -1,0 +1,36 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %> </h1>
+  <% if (user) { %>
+    <form action="/workouts/<%= workout._id %>?_method=PUT" method="POST">
+    <label>Date:
+      <input type="date" name="date" value="<%= workout.date %>">
+    </label><br>
+    <label>Duration:
+      <input type="number" name="duration" value="<%= workout.duration %>">>
+    </label><br>
+    <label>Type:
+      <select name="method" value="<%= workout.method %>">
+        <option value="Cycling">Cycling</option>
+        <option value="Running">Running</option>
+        <option value="Swimming">Swimming</option>
+        <option value="Walking">Walking</option>
+        <option value="Weight-Lifting">Weight-Lifting</option>
+        <option value="Other">Other</option>
+      </select>
+    </label><br>
+    <label>AvgHR:
+      <input type="number" name="avgHr" value="<%= workout.avgHr %>">
+    </label><br>
+    <label>Cals-Burned:
+      <input type="number" name="calsBurned" value="<%= workout.calsBurned %>">
+    </label><br>
+  
+    <button type="submit">Update Workout</button>
+  </form>
+  <% } %>
+</main>
+
+<%- include('../partials/footer') %>

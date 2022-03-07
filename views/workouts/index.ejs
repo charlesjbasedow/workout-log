@@ -17,9 +17,9 @@
     <tbody>
       <% workouts.forEach(workout => { %>
         <tr>
-          <td><%= workout.date %></td>
+          <td><%= new Date(workout.date).toLocaleDateString('en-US', {day: 'numeric', month:'numeric', year: 'numeric'}); %></td>
           <td><%= workout.duration %></td>
-          <td><%= workout.type %></td>
+          <td><%= workout.method %></td>
           <td><%= workout.avgHr %></td>
           <td><%= workout.calsBurned %></td>
           <td><a href="/workouts/<%= workout._id %>">Details</a></td>

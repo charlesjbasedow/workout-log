@@ -79,11 +79,30 @@ function update(req, res) {
   })
 }
 
+function deleteWorkout(req, res) {
+  Workout.findById(req.params.id)
+  .then(workout => {
+    if (workout.owner.equals(req.user.profile._id)) {
+      workout.delete()
+      .then(() => {
+        res.redirect("/workouts")
+      })
+    } else {
+      throw new Error ("NOT AUTHORIZED")
+    }
+  })
+  .catch(err => {
+    console.log("the error:", err)
+    res.redirect("/workouts")
+  })
+}
+
 export {
   index,
   newWorkout as new,
   create,
   show,
   edit,
-  update
+  update,
+  deleteWorkout as delete
 }

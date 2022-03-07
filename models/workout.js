@@ -4,17 +4,12 @@ const Schema = mongoose.Schema
 
 const workoutSchema = new Schema({
   date: {
-    type: Date,
-    required: true
+    type: Date
   },
   duration: {
     type: Number,
     min: 1,
     max: 1440
-  },
-  owner: {
-    type: Schema.Types.ObjectId, 
-    ref: "Profile"
   },
   method: {
     type: String,
@@ -27,7 +22,11 @@ const workoutSchema = new Schema({
     max: 200
   },
   calsBurned: {
-    type: Number,
+    type: Number
+  },
+  owner: {
+    type: Schema.Types.ObjectId, 
+    ref: "Profile"
   },
 })
 

@@ -16,13 +16,19 @@ function index(req, res) {
 
 function create(req, res) {
   req.body.owner = req.user.profile._id
+  console.log(req.body)
   Workout.create(req.body)
   .then(workout => {
     res.redirect('/workouts')
   })
   .catch(err => {
     console.log(err)
-    res.redirect('/workouts')
+    res.redirect('/workouts/new')
+  })
+}
+function newWorkout(req,res) {
+  res.render('workouts/new', {
+    title: "Add Workout"
   })
 }
 
@@ -43,6 +49,7 @@ function show(req, res) {
 
 export {
   index,
+  newWorkout as new,
   create,
   show
 }

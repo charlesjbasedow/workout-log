@@ -97,6 +97,15 @@ function deleteWorkout(req, res) {
   })
 }
 
+function createCaff(req, res) {
+  Workout.findById(req.params.id, function(err, workout) {
+    workout.caffeine.push(req.body)
+    workout.save(function(err) {
+      res.redirect(`/workouts/${workout._id}`)
+    })
+  })
+}
+
 export {
   index,
   newWorkout as new,
@@ -104,5 +113,6 @@ export {
   show,
   edit,
   update,
-  deleteWorkout as delete
+  deleteWorkout as delete,
+  createCaff,
 }

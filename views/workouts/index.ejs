@@ -8,7 +8,7 @@
     <thead>
       <tr>
         <th>Date</th>
-        <th>Duration</th>
+        <th>Duration(min)</th>
         <th>Type</th>
         <th>Avg-HR</th>
         <th>Cals-Burned</th>
@@ -17,7 +17,7 @@
     <tbody>
       <% workouts.forEach(workout => { %>
         <tr>
-          <td><%= new Date(workout.date).toLocaleDateString('en-US', {day: 'numeric', month:'numeric', year: 'numeric'}); %></td>
+          <td><%= new Date(workout.date).toLocaleDateString('en-US', {day: 'numeric', month:'numeric', year: 'numeric'}) %></td>
           <td><%= workout.duration %></td>
           <td><%= workout.method %></td>
           <td><%= workout.avgHr %></td>

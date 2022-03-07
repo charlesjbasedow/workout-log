@@ -1,12 +1,13 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/workouts/show.css" />
 <%- include('../partials/nav') %>
 
 <main>
   <h1><%= title %></h1>
   <section>
     <div>Date: </div>
-    <div><%= workout.date %></div>
-    <div>Duration: </div>
+    <div><%= new Date(workout.date).toLocaleDateString('en-US', {day: 'numeric', month:'numeric', year: 'numeric'}) %></div>
+    <div>Duration(min): </div>
     <div><%= workout.duration %></div>
     <div>Type: </div>
     <div><%= workout.method %></div>
@@ -21,6 +22,54 @@
       <button class="btn" type="submit">Delete Workout</button>
     </form>
   </section>
+
+  <h2>Caffeine</h2>
+  <form 
+    id="add-caffeine-form"
+    action="/workouts/<%= workout._id %>/caffeine"
+    method="POST"
+  >
+  <label>Consumed:
+    <select name="consumed">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+    </select>
+  </label>
+  <label>Type:
+    <select name="caffType">
+    <option value="Coffee">Coffee</option>
+    <option value="Energy Drink">Energy Drink</option>
+    <option value="PreWorkout">PreWorkout</option>
+    <option value="Other">Other</option>
+    </select>
+  </label>
+  <label>Amount(mg):
+    <input type="number" name="caffAmount">
+  </label>
+    <button type="submit">Add Caffeine Data</button>
+  </form>
+  <% if (workout.caffeine.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Consumed</th>
+          <th>Type</th>
+          <th>Amount(mg)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% workout.caffeine.forEach(function(caff) { %>
+          <tr>
+            <td><%= caff.consumed %></td>
+            <td><%= caff.caffType %></td>
+            <td><%= caff.caffAmount %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <h3>No Caffeine Data</h3>
+  <% } %>
 </main>
 
 <%- include('../partials/footer') %>

@@ -4,42 +4,37 @@
 <main>
   <h1><%= title %> </h1>
   <% if (user) { %>
-  <form action="/goals" method="POST">
+  <form action="/profile" method="POST">
+    <label>Gender:
+      <select name="gender">
+        <option value="" selected></option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+    </label><br>
     <label>Age:
       <input type="number" name="age">
     </label><br>
     <label>Height(in):
       <input type="input" name="height">
     </label><br>
-    <label>Weight(lbs):
-      <input type="number" name="weight">
-    </label><br>
-    <label>Goal:
-      <select name="userGoal">
-        <option value="" selected></option>
-        <option value="Gain Weight">Gain Weight</option>
-        <option value="Lose Weight">Lose Weight</option>
-        <option value="Maintain Weight">Maintain Weight</option>
-      </select>
-    </label><br>
   
 </form>
     <table>
       <thead>
         <tr>
+          <th>Gender</th>
           <th>Age</th>
           <th>Height(in)</th>
-          <th>Weight(lbs)</th>
-          <th>Goal</th>
         </tr>
       </thead>
       <tbody>
-        <% goals.forEach(goal => { %>
+        <% profiles.forEach(profile => { %>
           <tr>
-            <td><%= goal.age %></td>
-            <td><%= goal.height %></td>
-            <td><%= goal.weight %></td>
-            <td><%= goal.userGoal %></td>
+            <td><%= profile.gender %></td>
+            <td><%= profile.age %></td>
+            <td><%= profile.height %></td>
           </tr>
           <% }) %>
       </tbody>

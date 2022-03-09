@@ -1,53 +1,53 @@
-import { Goal } from "../models/profile.js"
+import { Profile } from "../models/profile.js"
 
 function index(req, res) {
-  Goal.find({})
-  .then(goals => {
-    res.render('goals/index', {
-      goals,
-      title: "Enter Your Info"
+  Profile.find({})
+  .then(profiles => {
+    res.render('profile/index', {
+      profiles,
+      title: "Profile"
     })
   })
   .catch(err => {
     console.log(err)
-    res.redirect("/goals")
+    res.redirect("/profile")
   })
 }
 
 function create(req, res) {
   req.body.owner = req.user.profile._id
   console.log(req.body)
-  Goal.create(req.body)
-  .then(goal => {
-    res.redirect('/goals')
+  Profile.create(req.body)
+  .then(profile => {
+    res.redirect('/profile')
   })
   .catch(err => {
     console.log(err)
-    res.redirect('/goals')
+    res.redirect('/profile')
   })
 }
 
 function edit(req, res) {
-  Goal.findById(req.params.id)
-  .then(goal => {
-    res.render("goals/edit", {
-      goal,
-      title: "Edit Info"
+  Profile.findById(req.params.id)
+  .then(profile => {
+    res.render("profile/edit", {
+      profile,
+      title: "Edit Profile"
     })
   })
   .catch(err => {
     console.log(err)
-    res.redirect("/goals")
+    res.redirect("/profile")
   })
 }
 
 function update(req, res) {
-  Goal.findById(req.params.id)
-  .then(goal => {
-    if (goal.owner.equals(req.user.profile._id)) {
-      goal.updateOne(req.body, {new: true})
+  Profile.findById(req.params.id)
+  .then(profile => {
+    if (profile.owner.equals(req.user.profile._id)) {
+      profile.updateOne(req.body, {new: true})
       .then(() => {
-        res.redirect(`/goals/${req.params.id}`)
+        res.redirect(`/profile/${req.params.id}`)
       })
     } else {
       throw new Error("NOT AUTHORIZED")
@@ -55,7 +55,7 @@ function update(req, res) {
   })
   .catch(err => {
     console.log("the error:", err)
-    res.redirect("/goals")
+    res.redirect("/profile")
   })
 }
 

@@ -25,7 +25,7 @@ const goalSchema = new Schema ({
   }
 })
 
-const profileSchema = new mongoose.Schema({
+const profileSchema = new Schema({
   name: String,
   avatar: String,
   gender: {
@@ -47,7 +47,6 @@ const profileSchema = new mongoose.Schema({
     ref: "Profile"
   },
   goal: [goalSchema],
-  timestamps: true
 })
 
 const Profile = mongoose.model('Profile', profileSchema)

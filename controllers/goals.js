@@ -1,4 +1,4 @@
-import { Goal } from "../models/goal.js"
+import { goal, Goal } from "../models/goal.js"
 
 function index(req, res) {
   Goal.find({})
@@ -14,6 +14,20 @@ function index(req, res) {
   })
 }
 
+function create(req, res) {
+  req.body.owner = req.user.profile._id
+  console.log(req.body)
+  Goal.create(req.body)
+  .then(goal => {
+    res.redirect('/goals')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/goals')
+  })
+}
+
 export {
-  index
+  index,
+  create
 }

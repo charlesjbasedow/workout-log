@@ -17,7 +17,7 @@ function index(req, res) {
 function create(req, res) {
   req.body.owner = req.user.profile._id
   console.log(req.body)
-  Profile.create(req.body)
+  MyProfile.create(req.body)
   .then(profile => {
     res.redirect('/myprofiles')
   })
@@ -82,7 +82,7 @@ function update(req, res) {
 
 function createGoal(req, res) {
   MyProfile.findById(req.params.id, function(err, myprofile) {
-    myprofile.goals.push(req.body)
+    myprofile.goal.push(req.body)
     myprofile.save(function(err) {
       res.redirect(`/myprofiles/${myprofile._id}`)
     })

@@ -6,7 +6,7 @@
 
   <form 
   id="add-goals-form"
-  action="/profile/<%= profile._id %>/goals"
+  action="/myprofiles/<%= myprofile._id %>/goals"
   method="POST"
 >
 <label>Current Weight(lbs):
@@ -33,6 +33,7 @@
   <option value="Not Active">Not Active</option>
   </select>
 </label>
+<button type="submit">Confirm Goal</button>
 </form>
 <% if (myprofile.goal.length) { %>
   <table>

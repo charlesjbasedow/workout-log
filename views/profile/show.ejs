@@ -1,0 +1,60 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+
+  <form 
+  id="add-goals-form"
+  action="/profile/<%= profile._id %>/goals"
+  method="POST"
+>
+<label>Current Weight(lbs):
+  <input type="number" name="currentWeight">
+</label>
+<label>Goal Weight(lbs):
+  <input type="number" name="goalWeight">
+</label>
+<label>Weekly Goal:
+  <select name="weeklyGoal">
+  <option value="" selected></option>
+  <option value="Lose 1lb per week">Lose 1lb per week</option>
+  <option value="Lose 2lbs per week">Lose 2lbs per week</option>
+  <option value="Maintain Weight">Maintain Weight</option>
+  <option value="Gain 1lb per week">Gain 1lb per week</option>
+  <option value="Gain 2lbs per week">Gain 2lbs per week</option>
+  </select>
+</label>
+<label>Activity Level:
+  <select name="activeLvl">
+  <option value="" selected></option>
+  <option value="Very Active">Very Active</option>
+  <option value="Lightly Active">Lightly Active</option>
+  <option value="Not Active">Not Active</option>
+  </select>
+</label>
+</form>
+<% if (profile.goal.length) { %>
+  <table>
+    <thead>
+      <tr>
+        <th>Current Weight</th>
+        <th>Goal Weight</th>
+        <th>Weekly Goal</th>
+        <th>Activity Level</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% profile.goal.forEach(function(goal) { %>
+        <tr>
+          <td><%= goal.currentWeight %></td>
+          <td><%= goal.goalWeight %></td>
+          <td><%= goal.weeklyGoal %></td>
+          <td><%= goal.activeLvl %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+<% } %>
+</main>
+<%- include('../partials/footer') %>

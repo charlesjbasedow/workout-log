@@ -27,6 +27,21 @@ function create(req, res) {
   })
 }
 
+function show(req, res) {
+  Profile.findById(req.params.id)
+  .populate("owner")
+  .then(profile => {
+    res.render('profile/show', {
+      profile,
+      title: "Goals"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/profile')
+  })
+}
+
 function edit(req, res) {
   Profile.findById(req.params.id)
   .then(profile => {
@@ -59,9 +74,20 @@ function update(req, res) {
   })
 }
 
+function createGoal(req, res) {
+  Profile.findById(req.params.id, function(err, profile) {
+    profile.goals.push(req.body)
+    profile.save(function(err) {
+      res.redirect(`/profile/${profile._id}`)
+    })
+  })
+}
+
 export {
   index,
+  show,
   create,
   edit,
-  update
+  update,
+  createGoal
 }

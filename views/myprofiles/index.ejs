@@ -3,7 +3,7 @@
 
 <main>
   <h1><%= title %> </h1>
-  <% if (profiles.length < 1) { %>
+  <% if (myprofiles.length ) { %>
     <table>
       <thead>
         <tr>
@@ -13,12 +13,12 @@
         </tr>
       </thead>
       <tbody>
-        <% profiles.forEach(profile => { %>
+        <% myprofiles.forEach(myprofile => { %>
           <tr>
-            <td><%= profile.gender %></td>
-            <td><%= profile.age %></td>
-            <td><%= profile.height %></td>
-            <td><a href="/profiles/<%= profile._id %>">Goals</a></td>
+            <td><%= myprofile.gender %></td>
+            <td><%= myprofile.age %></td>
+            <td><%= myprofile.height %></td>
+            <td><a href="/myprofiles/<%= myprofile._id %>">Goals</a></td>
           </tr>
           <% }) %>
       </tbody>
@@ -26,7 +26,7 @@
     <% } else { %>
       <h2>No Profile Found</h2>
       <a 
-      href="/profiles/new" <%- title === 'Create Profile' ? 'class="active"' : '' %>
+      href="/myprofiles/new" <%- title === 'Create Profile' ? 'class="active"' : '' %>
     >Create Profile</a>
   <% } %>
 </main>

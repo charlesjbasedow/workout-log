@@ -34,7 +34,7 @@
   </select>
 </label>
 </form>
-<% if (profile.goal.length) { %>
+<% if (myprofile.goal.length) { %>
   <table>
     <thead>
       <tr>
@@ -45,7 +45,7 @@
       </tr>
     </thead>
     <tbody>
-      <% profile.goal.forEach(function(goal) { %>
+      <% myprofile.goal.forEach(function(goal) { %>
         <tr>
           <td><%= goal.currentWeight %></td>
           <td><%= goal.goalWeight %></td>

@@ -17,6 +17,8 @@ function index(req, res) {
 function create(req, res) {
   req.body.owner = req.user.profile._id
   console.log(req.body)
+  let runDate = new Date(req.body.date)
+  req.body.date = new Date( runDate.getTime() + Math.abs(runDate.getTimezoneOffset()*60000))
   Workout.create(req.body)
   .then(workout => {
     res.redirect('/workouts')

@@ -23,6 +23,9 @@
           <td><%= workout.avgHr %></td>
           <td><%= workout.calsBurned %></td>
           <td><a href="/workouts/<%= workout._id %>">Details</a></td>
+          <td><form action="/workouts/<%= workout._id %>?_method=DELETE" method="POST">
+            <button class="btn" type="submit">X</button>
+          </form></td>
         </tr>
       <% }) %>
     </tbody>

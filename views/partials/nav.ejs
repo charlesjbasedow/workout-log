@@ -4,6 +4,9 @@
 </head>
 <body>
   <nav>
+    <a 
+      href="/" <%- title === 'Home' ? 'class="active"' : '' %>
+    >Home</a>
     <% if (user) { %>
       <a href="/auth/logout">
         <button type="submit">Logout</button>
@@ -22,7 +25,7 @@
       href="/workouts/new" <%- title === 'Add Workout' ? 'class="active"' : '' %>
     >Add Workout</a>
     <a 
-			href="/profile"
+			href="/profiles"
 			<%- title === 'Profile' ? 'class="active"' : '' %>
 		>
 			My Profile

@@ -106,6 +106,21 @@ function createCaff(req, res) {
   })
 }
 
+// function deleteCaff(req, res) {
+//   Workout.findById(req.params.profileId)
+//   .then(profile => {
+//     workout.caffeine.remove({_id: req.params.catId})
+//     profile.save()
+//     .then(() => {
+//       res.redirect(`/profiles/${req.user.profile._id}`)
+//     })
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     res.redirect(`/profiles/${req.user.profile._id}`)
+//   })
+// }
+
 export {
   index,
   newWorkout as new,

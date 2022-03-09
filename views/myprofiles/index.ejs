@@ -3,24 +3,7 @@
 
 <main>
   <h1><%= title %> </h1>
-  <% if (user) { %>
-  <form action="/profile" method="POST">
-    <label>Gender:
-      <select name="gender">
-        <option value="" selected></option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-        <option value="Other">Other</option>
-      </select>
-    </label><br>
-    <label>Age:
-      <input type="number" name="age">
-    </label><br>
-    <label>Height(in):
-      <input type="input" name="height">
-    </label><br>
-  
-</form>
+  <% if (profiles.length < 1) { %>
     <table>
       <thead>
         <tr>
@@ -35,11 +18,16 @@
             <td><%= profile.gender %></td>
             <td><%= profile.age %></td>
             <td><%= profile.height %></td>
-            <td><a href="/profile/<%= profile._id %>">Goals</a></td>
+            <td><a href="/profiles/<%= profile._id %>">Goals</a></td>
           </tr>
           <% }) %>
       </tbody>
     </table>
+    <% } else { %>
+      <h2>No Profile Found</h2>
+      <a 
+      href="/profiles/new" <%- title === 'Create Profile' ? 'class="active"' : '' %>
+    >Create Profile</a>
   <% } %>
 </main>
 

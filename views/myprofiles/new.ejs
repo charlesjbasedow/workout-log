@@ -1,0 +1,32 @@
+<%- include('../partials/html-head')  %> 
+<%- include('../partials/nav')  %>   
+
+<main>
+  <h1><%= title %> </h1>
+  <% if (user) { %>
+  <form action="/profiles" method="POST">
+    <label>Gender:
+      <select name="gender">
+        <option value="" selected></option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+    </label><br>
+    <label>Age:
+      <input type="number" name="age">
+    </label><br>
+    <label>Height(in):
+      <input type="input" name="height">
+    </label><br>
+  <% } %>
+</form>
+
+
+
+
+
+
+
+
+<%- include('../partials/footer') %>

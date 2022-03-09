@@ -1,4 +1,4 @@
-import { goal, Goal } from "../models/goal.js"
+import { Goal } from "../models/profile.js"
 
 function index(req, res) {
   Goal.find({})

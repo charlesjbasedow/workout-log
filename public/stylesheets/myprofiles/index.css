@@ -1,0 +1,46 @@
+table {
+  font-size: 2rem;
+  border: 2px groove #b41515;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+table thead th {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 2px solid #b41515;
+}
+
+table td {
+  padding: 10px;
+  text-align: center;
+}
+
+#list td:nth-child(2),
+#list td:nth-child(3) {
+  min-width: 100px;
+}
+.goals {
+  position: absolute;
+  right: 35%;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+.goal-link {
+  text-decoration: underline;
+  text-decoration-color: #b41515;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+.createprof {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #b41515;
+}

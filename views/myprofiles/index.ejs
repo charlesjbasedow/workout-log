@@ -1,9 +1,10 @@
 <%- include('../partials/html-head')  %> 
+<link rel="stylesheet" href="/stylesheets/myprofiles/index.css" />
 <%- include('../partials/nav')  %>   
 
 <main>
-  <h1><%= title %> </h1>
   <% if (myprofiles.length ) { %>
+    <h1><%= title %> </h1>
     <table>
       <thead>
         <tr>
@@ -18,16 +19,17 @@
             <td><%= myprofile.gender %></td>
             <td><%= myprofile.age %></td>
             <td><%= myprofile.height %></td>
-            <td><a href="/myprofiles/<%= myprofile._id %>">Goals</a></td>
           </tr>
+          <div class="goals">
+            <a class="goal-link" href="/myprofiles/<%= myprofile._id %>">Goals</a>
+            </div>
           <% }) %>
       </tbody>
     </table>
     <% } else { %>
       <h2>No Profile Found</h2>
-      <a 
-      href="/myprofiles/new" <%- title === 'Create Profile' ? 'class="active"' : '' %>
-    >Create Profile</a>
+      <a class="createprof"
+      href="/myprofiles/new">Create Profile</a>
   <% } %>
 </main>
 

@@ -2,14 +2,21 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>Welcome, <%= user ? user.profile.name : "friend" %></h1>
   <% if (user?.profile.avatar) { %>
+    <h2>Welcome Back, <%= user.profile.name %></h2>
     <div>
       <img
         src="<%= user.profile.avatar %>"
         alt="<%= user.profile.name %> avatar"
       />
     </div>
+  <% } else { %>
+    <h3>You must be logged in to access this app</h3>
+    <a href="/auth/google" class="siwg-link">
+      <button type="submit" class="siwg">
+        <img id="siwg-image" alt="Sign in with Google" />
+      </button>
+    </a>
   <% } %>
 </main>
 

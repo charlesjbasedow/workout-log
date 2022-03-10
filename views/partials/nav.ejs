@@ -4,6 +4,7 @@
 </head>
 <body>
   <nav>
+    <% if (user) { %>
     <a 
       href="/" <%- title === 'Home' ? 'class="active"' : '' %>
     >Home</a>
@@ -20,14 +21,9 @@
       href="/workouts/new" <%- title === 'Add Workout' ? 'class="active"' : '' %>
     >Add Workout</a>
     <% if (user) { %>
-      <a class="logoutbtn" href="/auth/logout">
-        <button type="submit">Logout</button>
-      </a>
-    <% } else { %>
-      <a href="/auth/google" class="siwg-link">
-        <button type="submit" class="siwg">
-          <img id="siwg-image" alt="Sign in with Google" />
-        </button>
+      <a class="logout" href="/auth/logout">Log Out
       </a>
     <% } %>
+    <% } %>
   </nav>
+  

@@ -35,8 +35,12 @@ nav {
 a {
   color: white;
   text-decoration: none;
-  padding: 5px 15px;;
+  padding: 5px 14px;
   justify-content: center;
+}
+
+a:hover {
+  color: white;
 }
 
 
@@ -49,5 +53,5 @@ main {
 }
 
 h1 {
-  font-size: 3.6rem;
+  font-size: 2.8rem;
 }

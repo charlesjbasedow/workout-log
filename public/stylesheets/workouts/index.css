@@ -3,12 +3,13 @@ table {
 }
 
 table thead th {
-  padding: 10px;
+  padding: 5px;
+  text-align: center;
   border-bottom: 2px solid #b41515;
 }
 
 table td {
-  padding: 15px;
+  padding: 10px;
   text-align: center;
 }
 
@@ -29,6 +30,12 @@ table td {
 }
 
 .btn {
-  color: #b41515;
+  background-color: #b41515;
   padding: 0px 5px;
+  font-size: 1.1rem;
+}
+
+.btn:hover {
+  background-color: #b41515;
+  color: white;
 }

@@ -7,8 +7,20 @@
     <a 
       href="/" <%- title === 'Home' ? 'class="active"' : '' %>
     >Home</a>
+    <a 
+			href="/myprofiles"
+			<%- title === 'My Profile' ? 'class="active"' : '' %>
+		>
+			My Profile
+		</a>
+    <a 
+      href="/workouts" <%- title === 'All Workouts' ? 'class="active"' : '' %>
+    >All Workouts</a>
+    <a 
+      href="/workouts/new" <%- title === 'Add Workout' ? 'class="active"' : '' %>
+    >Add Workout</a>
     <% if (user) { %>
-      <a href="/auth/logout">
+      <a class="logoutbtn" href="/auth/logout">
         <button type="submit">Logout</button>
       </a>
     <% } else { %>
@@ -18,16 +30,4 @@
         </button>
       </a>
     <% } %>
-    <a 
-      href="/workouts" <%- title === 'All Workouts' ? 'class="active"' : '' %>
-    >All Workouts</a>
-    <a 
-      href="/workouts/new" <%- title === 'Add Workout' ? 'class="active"' : '' %>
-    >Add Workout</a>
-    <a 
-			href="/myprofiles"
-			<%- title === 'My Profile' ? 'class="active"' : '' %>
-		>
-			My Profile
-		</a>
   </nav>

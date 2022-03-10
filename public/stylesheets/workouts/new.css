@@ -1,19 +1,41 @@
 form {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(2, minmax(auto, 35.2rem));
+  display:grid;
   font-size: 2rem;
+  justify-content: center;
 }
 
 form * {
-  padding: 5px;
-  border-radius: 5px;
+  padding: 1px;
+  border-radius: 6px;
+  border-color: #b41515;
   font-size: 2rem;
 }
 
 form > button {
-  grid-column: span 2;
+  grid-column: span 1;
   width: 16rem;
-  margin-left: auto;
-  font-size: 2.2rem;
+  margin-left: 5%;
+  font-size: 2rem;
+}
+
+label {
+  display: block;
+}
+
+input[type=number] {
+  text-align: center;
+  width: 50%;
+  align-content: stretch;
+}
+
+input[type=date] {
+  text-align: center;
+  width: 50%;
+  align-content: stretch;
+}
+
+select {
+  text-align: center;
+  width: 50%;
+  align-content: stretch;
 }

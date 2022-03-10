@@ -9,11 +9,12 @@
     <label>Date:
       <input type="date" name="date">
     </label><br>
-    <label>Duration:
+    <label>Duration(min):
       <input type="number" name="duration">
     </label><br>
     <label>Type:
       <select name="method">
+        <option value="" selected></option>
         <option value="Cycling">Cycling</option>
         <option value="Running">Running</option>
         <option value="Swimming">Swimming</option>
@@ -28,8 +29,9 @@
     <label>Cals-Burned:
       <input type="number" name="calsBurned">
     </label><br>
-  
+    <div class="addbtn">
     <button type="submit">Add Workout</button>
+    </div>
   </form>
   <% } %>
 </main>

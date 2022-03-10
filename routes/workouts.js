@@ -12,6 +12,7 @@ router.post('/', isLoggedIn, workoutsCtrl.create)
 router.post('/:id/caffeine', isLoggedIn, workoutsCtrl.createCaff)
 router.put("/:id", isLoggedIn, workoutsCtrl.update)
 router.delete("/:id", isLoggedIn, workoutsCtrl.delete)
+router.delete("/:workoutId/caffeine/:caffId", isLoggedIn, workoutsCtrl.deleteCaff)
 
 
 

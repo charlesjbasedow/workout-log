@@ -108,20 +108,21 @@ function createCaff(req, res) {
   })
 }
 
-// function deleteCaff(req, res) {
-//   Workout.findById(req.params.profileId)
-//   .then(profile => {
-//     workout.caffeine.remove({_id: req.params.catId})
-//     profile.save()
-//     .then(() => {
-//       res.redirect(`/profiles/${req.user.profile._id}`)
-//     })
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect(`/profiles/${req.user.profile._id}`)
-//   })
-// }
+function deleteCaff(req, res) {
+  Workout.findById(req.params.workoutId)
+  .then(workout => {
+    workout.caffeine.remove({_id: req.params.caffId})
+    workout.save()
+    .then(() => {
+      res.redirect(`/workouts/${workout._id}`)
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/workouts/${workout._id}`)
+  })
+}
+
 
 export {
   index,
@@ -132,4 +133,5 @@ export {
   update,
   deleteWorkout as delete,
   createCaff,
+  deleteCaff
 }

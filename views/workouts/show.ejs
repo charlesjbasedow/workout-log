@@ -60,6 +60,9 @@
             <td><%= caff.consumed %></td>
             <td><%= caff.caffType %></td>
             <td><%= caff.caffAmount %></td>
+            <td><form action="/workouts/<%= workout._id %>/caffeine/<%= caff.id %>?_method=DELETE" method="POST">
+              <button class="btn" type="submit">X</button>
+            </form></td>
           </tr>
         <% }) %>
       </tbody>

@@ -1,7 +1,7 @@
 import { MyProfile } from "../models/myprofile.js"
 
 function index(req, res) {
-  MyProfile.find({})
+  MyProfile.find({owner: req.user.profile._id})
   .then(myprofiles => {
     res.render('myprofiles/index', {
       myprofiles,

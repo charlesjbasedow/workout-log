@@ -35,7 +35,6 @@ Access Here: https://cb-workout-log.herokuapp.com/
 - Enhance styling
 
 ## Stretch Goals
-- Have each user only access/view their created data
 - Track workouts logged by the date inputed on index page
 - Add drop downs on certain nav links (workouts)
 - Track meals (calories: protein, carbs, fat)

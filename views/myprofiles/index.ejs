@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/myprofiles/index.css" />
 <%- include('../partials/nav')  %>   
 
-<% if(user?.profile._id) { %>
+<% if(user) { %>
 <main>
   <% if (myprofiles.length ) { %>
     <h1><%= title %> </h1>

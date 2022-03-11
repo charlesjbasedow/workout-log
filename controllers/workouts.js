@@ -1,11 +1,11 @@
 import { Workout } from '../models/workout.js'
 
 function index(req, res) {
-  Workout.find({})
+  Workout.find({owner: req.user.profile._id})
   .then(workouts => {
     res.render('workouts/index', {
       workouts,
-      title: "Recent Workouts"
+      title: "Your Recent Workouts"
     })
   })
   .catch(err => {

@@ -37,4 +37,7 @@ Access Here: https://cb-workout-log.herokuapp.com/
 ## Stretch Goals
 - Track workouts logged by the date inputed on index page
 - Add drop downs on certain nav links (workouts)
+- View workouts in specific time frames
+- Add a survey star rating after adding each workout
+- Add light mode
 - Track meals (calories: protein, carbs, fat)

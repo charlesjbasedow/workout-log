@@ -12,6 +12,12 @@ table thead th {
   border-bottom: 2px solid black;
 }
 
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
 table td {
   padding: 10px;
   text-align: center;

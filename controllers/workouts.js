@@ -5,7 +5,7 @@ function index(req, res) {
   .then(workouts => {
     res.render('workouts/index', {
       workouts,
-      title: "All Workouts"
+      title: "Your Recent Workouts"
     })
   })
   .catch(err => {
@@ -40,7 +40,7 @@ function show(req, res) {
   .then(workout => {
     res.render('workouts/show', {
       workout,
-      title: "Workouts"
+      title: "Workout Details"
     })
   })
   .catch(err => {
@@ -54,7 +54,7 @@ function edit(req, res) {
   .then(workout => {
     res.render("workouts/edit", {
       workout,
-      title: "edit workout"
+      title: "Edit Workout"
     })
   })
   .catch(err => {

@@ -8,8 +8,9 @@ form * {
   font-size: 2rem;
 }
 h1 {
-  font: 2.2rem;
-  font-weight: bolder;
+  font-size: 3rem;
+  font-weight: bold;
+  font-style: italic;
 }
 
 

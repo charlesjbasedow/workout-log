@@ -11,25 +11,23 @@
     <div><%= workout.duration %></div>
     <div>Type: </div>
     <div><%= workout.method %></div>
-    <div>Avg-HR: </div>
+    <div>AvgHR: </div>
     <div><%= workout.avgHr %></div>
     <div>Cals-Burned: </div>
     <div><%= workout.calsBurned %></div>
     <form action="/workouts/<%= workout._id %>/edit" method="GET">
-      <button class="btn" type="submit">Edit Workout</button>
+      <button class="edit-btn" type="submit">Edit Workout</button>
     </form>
   </section>
 
   <h2>Caffeine</h2>
-  <form 
-    id="add-caffeine-form"
+  <form class="caff-form" 
     action="/workouts/<%= workout._id %>/caffeine"
     method="POST"
   >
-  <label>Consumed:
+  <label>Consumed?
     <select name="consumed">
-    <option value="Yes">Yes</option>
-    <option value="No">No</option>
+      <option value="Yes">Yes</option>
     </select>
   </label>
   <label>Type:
@@ -43,13 +41,12 @@
   <label>Amount(mg):
     <input type="number" name="caffAmount">
   </label>
-    <button type="submit">Add Caffeine Data</button>
+    <button class="caff-btn" type="submit">Add Caffeine</button>
   </form>
   <% if (workout.caffeine.length) { %>
     <table>
       <thead>
         <tr>
-          <th>Consumed</th>
           <th>Type</th>
           <th>Amount(mg)</th>
         </tr>
@@ -57,11 +54,10 @@
       <tbody>
         <% workout.caffeine.forEach(function(caff) { %>
           <tr>
-            <td><%= caff.consumed %></td>
             <td><%= caff.caffType %></td>
             <td><%= caff.caffAmount %></td>
             <td><form action="/workouts/<%= workout._id %>/caffeine/<%= caff.id %>?_method=DELETE" method="POST">
-              <button class="btn" type="submit">X</button>
+              <button class="x-caff-btn" type="submit">X</button>
             </form></td>
           </tr>
         <% }) %>

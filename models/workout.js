@@ -5,28 +5,32 @@ const Schema = mongoose.Schema
 const caffSchema = new Schema({
   consumed: {
     type: String,
-    enum: ['Yes', 'No']
+    enum: ['Yes'],
+    required: true
   },
   caffType: {
     type: String,
-    enum: ['Coffee', 'Energy Drink', 'PreWorkout', 'Other']
+    enum: ['Coffee', 'Energy Drink', 'PreWorkout', 'Other'],
+    required: true
   },
   caffAmount: {
     type: Number,
     min: 1,
     max: 999,
+    required: true
   }
-  
-  })
+})
 
 const workoutSchema = new Schema({
   date: {
-    type: Date
+    type: Date,
+    required: true
   },
   duration: {
     type: Number,
     min: 1,
-    max: 1440
+    max: 1440,
+    required: true
   },
   method: {
     type: String,
@@ -36,10 +40,12 @@ const workoutSchema = new Schema({
   avgHr: {
     type: Number,
     min: 1,
-    max: 200
+    max: 200,
+    required: true
   },
   calsBurned: {
-    type: Number
+    type: Number,
+    required: true
   },
   owner: {
     type: Schema.Types.ObjectId, 

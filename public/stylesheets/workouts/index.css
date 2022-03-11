@@ -3,18 +3,21 @@ table {
   border: 2px solid white;
   background-color: #B6D0E2;
   color: black;
+  margin-top: 20px;
 }
 
 table thead th {
-  padding: 5px;
+  padding: 10px;
   text-align: center;
-  border-bottom: 2px solid #B6D0E2;
+  border-bottom: 2px solid black;
 }
 
 table td {
   padding: 10px;
   text-align: center;
+  font-weight: bold;
   font-style: italic;
+  font-size: 1.8rem;
 }
 
 #list td:nth-child(2),

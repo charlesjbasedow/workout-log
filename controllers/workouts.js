@@ -30,7 +30,7 @@ function create(req, res) {
 }
 function newWorkout(req,res) {
   res.render('workouts/new', {
-    title: "Add Workout"
+    title: "Add Workout Below"
   })
 }
 

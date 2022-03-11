@@ -1,25 +1,21 @@
 form {
   display:grid;
-  font-size: 2rem;
 }
+
 
 form * {
-  padding: 1px;
-  border-radius: 6px;
-  border-color: #b41515;
+  padding: 0px;
   font-size: 2rem;
+}
+h1 {
+  font: 2.2rem;
+  font-weight: bolder;
 }
 
-form > button {
-  grid-column: span 1;
-  width: 16rem;
-  margin-left: 5%;
-  font-size: 2rem;
-}
 
 label {
-  display: table-cell;
   text-align: right;
+  margin: 30px 200px 0 0;
 }
 
 input{
@@ -27,12 +23,28 @@ input{
   color: black;
   width: 50%;
   align-content: stretch;
+  border: 2px solid #B6D0E2;
+  border-radius: 12px;
 }
-
 
 select {
   text-align: center;
   color: black;
   width: 50%;
   align-content: stretch;
+  border: 2px solid#B6D0E2;
+  border-radius: 12px;
+}
+
+.addbtn {
+  position: absolute;
+  bottom: 45%;
+  background-color: #B6D0E2;
+  color: black;
+  border: 2px solid white;
+  border-radius: 12px;
+  font-weight: bolder;
+  font-size: 2.2rem;
+  margin: 0 0 0 150px;
+  width: 15%;
 }

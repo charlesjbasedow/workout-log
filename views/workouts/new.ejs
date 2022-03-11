@@ -8,10 +8,10 @@
   <form action="/workouts" method="POST">
     <label>Date:
       <input type="date" name="date">
-    </label><br>
+    </label>
     <label>Duration(min):
       <input type="number" name="duration">
-    </label><br>
+    </label>
     <label>Type:
       <select name="method">
         <option value="" selected></option>
@@ -22,16 +22,14 @@
         <option value="Weight-Lifting">Weight-Lifting</option>
         <option value="Other">Other</option>
       </select>
-    </label><br>
+    </label>
     <label>AvgHR:
       <input type="number" name="avgHr">
-    </label><br>
+    </label>
     <label>Cals-Burned:
       <input type="number" name="calsBurned">
-    </label><br>
-    <div class="addbtn">
-    <button type="submit">Add Workout</button>
-    </div>
+    </label>
+    <button class="addbtn" type="submit">Add Workout</button>
   </form>
   <% } %>
 </main>

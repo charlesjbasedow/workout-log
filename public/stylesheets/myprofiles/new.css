@@ -25,8 +25,8 @@ input{
   color: black;
   width: 35%;
   align-content: stretch;
-  border: solid 2px #B6D0E2;
-  border-radius: 10px;
+  border: 2px solid #B6D0E2;
+  border-radius: 12px;
 }
 
 select {
@@ -34,8 +34,8 @@ select {
   color: black;
   width: 35%;
   align-content: stretch;
-  border: solid 2px #B6D0E2;
-  border-radius: 10px;
+  border: 2px solid #B6D0E2;
+  border-radius: 12px;
 }
 
 .prof-btn2 {
@@ -44,7 +44,7 @@ select {
   background-color: #B6D0E2;
   color: black;
   border: 1px solid white;
-  border-radius: 10px;
+  border-radius: 12px;
   font-weight: bolder;
   font-size: 2.2rem;
   margin: 0 0 0 200px;

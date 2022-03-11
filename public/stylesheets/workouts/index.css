@@ -12,7 +12,7 @@ table thead th {
   border-bottom: 2px solid black;
 }
 
-h1 {
+h1, h2 {
   font-size: 3rem;
   font-weight: bold;
   font-style: italic;

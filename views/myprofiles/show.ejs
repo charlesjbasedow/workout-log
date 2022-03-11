@@ -1,4 +1,5 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/myprofiles/show.css" />
 <%- include('../partials/nav') %>
 
 <main>
@@ -33,14 +34,14 @@
   <option value="Not Active">Not Active</option>
   </select>
 </label>
-<button type="submit">Confirm Goal</button>
+<button class="add-goal-btn" type="submit">Add Goal</button>
 </form>
 <% if (myprofile.goal.length) { %>
   <table>
     <thead>
       <tr>
-        <th>Current Weight</th>
-        <th>Goal Weight</th>
+        <th>Current Weight(lbs)</th>
+        <th>Goal Weight(lbs)</th>
         <th>Weekly Goal</th>
         <th>Activity Level</th>
       </tr>
@@ -56,6 +57,8 @@
       <% }) %>
     </tbody>
   </table>
+<% } else { %>
+  <h3>No Goals Found</h3>
 <% } %>
 </main>
 <%- include('../partials/footer') %>

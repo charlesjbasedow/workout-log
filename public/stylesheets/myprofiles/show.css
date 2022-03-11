@@ -1,0 +1,76 @@
+form {
+  display:grid;
+}
+
+
+form * {
+  padding: 0px;
+  font-size: 2rem;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+label {
+  text-align: right;
+  margin: 30px 200px 0 0;
+}
+
+input{
+  text-align: center;
+  color: black;
+  width: 50%;
+  align-content: stretch;
+  border: 2px solid #B6D0E2;
+  border-radius: 12px;
+}
+
+select {
+  text-align: center;
+  color: black;
+  width: 50%;
+  align-content: stretch;
+  border: 2px solid#B6D0E2;
+  border-radius: 12px;
+}
+
+.add-goal-btn {
+  position: absolute;
+  right: 30%;
+  bottom: 70%;
+  background-color: #B6D0E2;
+  color: black;
+  border: 2px solid white;
+  border-radius: 12px;
+  font-weight: bolder;
+  font-size: 2.2rem;
+  margin: 0 0 0 200px;
+  width: 10%;
+}
+
+table {
+  font-size: 2rem;
+  border: 1px solid white;
+  border-radius: 6px;
+  background-color:#B6D0E2;
+  color: black;
+  margin: 80px 0 0 0;
+}
+
+table thead th {
+  padding: 5px;
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+
+
+table td {
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.8rem;
+}

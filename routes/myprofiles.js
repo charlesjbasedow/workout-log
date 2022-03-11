@@ -1,6 +1,6 @@
 import { Router } from 'express'
-import * as myProfilesCtrl from '../controllers/myprofiles.js'
 import { isLoggedIn } from '../middleware/middleware.js'
+import * as myProfilesCtrl from '../controllers/myprofiles.js'
 
 const router = Router()
 

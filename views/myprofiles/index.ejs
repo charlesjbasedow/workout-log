@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/myprofiles/index.css" />
 <%- include('../partials/nav')  %>   
 
+<% if(user?.profile._id) { %>
 <main>
   <% if (myprofiles.length ) { %>
     <h1><%= title %> </h1>
@@ -32,18 +33,5 @@
       href="/myprofiles/new">Create Profile Here</a>
   <% } %>
 </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<% } %>
 <%- include('../partials/footer') %>

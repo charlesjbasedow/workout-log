@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/workouts/show.css" />
 <%- include('../partials/nav') %>
 
+<% if (user) { %>
 <main>
   <h1><%= title %></h1>
   <section>
@@ -67,5 +68,6 @@
     <h3>No Caffeine Data</h3>
   <% } %>
 </main>
+<% } %>
 
 <%- include('../partials/footer') %>

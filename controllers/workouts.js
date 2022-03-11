@@ -5,7 +5,7 @@ function index(req, res) {
   .then(workouts => {
     res.render('workouts/index', {
       workouts,
-      title: "Your Recent Workouts"
+      title: "Recent Workouts"
     })
   })
   .catch(err => {

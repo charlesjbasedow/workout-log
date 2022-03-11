@@ -2,9 +2,9 @@
 <link rel="stylesheet" href="/stylesheets/workouts/edit.css" />
 <%- include('../partials/nav') %>
 
+<% if (user) { %>
 <main>
   <h1><%= title %> </h1>
-  <% if (user) { %>
     <form action="/workouts/<%= workout._id %>?_method=PUT" method="POST">
       <label>Date:
         <input type="date" name="date">
@@ -31,7 +31,7 @@
       </label>
       <button class="up-btn" type="submit">Update Workout</button>
   </form>
-  <% } %>
 </main>
+<% } %>
 
 <%- include('../partials/footer') %>

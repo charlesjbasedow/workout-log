@@ -2,7 +2,9 @@
 <link rel="stylesheet" href="/stylesheets/workouts/index.css" />
 <%- include('../partials/nav')  %>   
 
+
 <main>
+  <% if (user?.profile._id) { %>
 <h1><%= title %> </h1>
   <table id="list">
     <thead>
@@ -30,7 +32,9 @@
       <% }) %>
     </tbody>
   </table>
+  <% } %>
 </main>
+
 
 
 <%- include('../partials/footer') %>

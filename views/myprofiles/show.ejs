@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/myprofiles/show.css" />
 <%- include('../partials/nav') %>
 
+<% if (user) { %>
 <main>
   <h1><%= title %></h1>
 
@@ -61,4 +62,5 @@
   <h3>No Goals Found</h3>
 <% } %>
 </main>
+<% } %>
 <%- include('../partials/footer') %>

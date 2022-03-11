@@ -1,9 +1,9 @@
 <%- include('../partials/html-head')  %> 
 <link rel="stylesheet" href="/stylesheets/myprofiles/new.css" />
-<%- include('../partials/nav')  %>   
+<%- include('../partials/nav')  %>  
 
+<% if (user) { %>
 <main>
-  <% if (user) { %>
   <h1><%= title %> </h1>
   <form action="/myprofiles" method="POST">
     <label>Gender:
@@ -21,16 +21,7 @@
       <input type="input" name="height">
     </label>
     <button class="prof-btn2 "type="submit">Create Profile</button>
-  <% } %>
 </form>
-
 </main>
-
-
-
-
-
-
-
-
+<% } %>
 <%- include('../partials/footer') %>

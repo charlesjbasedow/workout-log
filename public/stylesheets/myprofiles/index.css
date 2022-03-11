@@ -1,21 +1,28 @@
 table {
   font-size: 2rem;
-  border: 2px groove #b41515;
+  border: 1px solid white;
+  border-radius: 6px;
+  background-color:#B6D0E2;
+  color: black;
+  margin: 20px 0 0 0;
 }
 
 h1 {
   font-size: 3rem;
+  font-weight: bold;
+  font-style: italic;
 }
 
 table thead th {
-  padding: 10px;
+  padding: 5px 10px 5px 10px;
   text-align: center;
-  border-bottom: 2px solid #b41515;
+  border-bottom: 2px solid black;
 }
 
 table td {
-  padding: 10px;
+  padding: 5px;
   text-align: center;
+  font-style: italic
 }
 
 #list td:nth-child(2),
@@ -31,7 +38,7 @@ table td {
 
 .goal-link {
   text-decoration: underline;
-  text-decoration-color: #b41515;
+  text-decoration-color: #B6D0E2;
 }
 
 h2 {
@@ -42,5 +49,5 @@ h2 {
   font-size: 2.8rem;
   font-weight: bold;
   text-decoration: underline;
-  text-decoration-color: #b41515;
+  text-decoration-color: #B6D0E2;
 }

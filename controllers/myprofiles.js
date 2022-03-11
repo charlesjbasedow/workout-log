@@ -29,7 +29,7 @@ function create(req, res) {
 
 function newProfile(req,res) {
   res.render('myprofiles/new', {
-    title: "Add Profile"
+    title: "Create Your Profile"
   })
 }
 

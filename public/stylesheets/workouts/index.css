@@ -1,16 +1,20 @@
 table {
   font-size: 2rem;
+  border: 2px solid white;
+  background-color: #B6D0E2;
+  color: black;
 }
 
 table thead th {
   padding: 5px;
   text-align: center;
-  border-bottom: 2px solid #b41515;
+  border-bottom: 2px solid #B6D0E2;
 }
 
 table td {
   padding: 10px;
   text-align: center;
+  font-style: italic;
 }
 
 #list td:nth-child(2),
@@ -20,18 +24,20 @@ table td {
 
 #list a {
   padding: 3px;
-  border-bottom: 2px solid #b41515;
+  font-weight: bold;
   font-size: 1.6rem;
-  color: white;
+  color: black;
 }
 
 .btn {
-  background-color: #b41515;
+  background-color: black;
+  color: #B6D0E2;
+  border: white;
   padding: 0px 5px;
   font-size: 1.1rem;
 }
 
 .btn:hover {
-  background-color: #b41515;
-  color: white;
+  background-color: black;
+  color: #B6D0E2;
 }

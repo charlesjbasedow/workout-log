@@ -1,0 +1,52 @@
+form {
+  display:grid;
+}
+
+
+form * {
+  padding: 1px;
+  font-size: 2rem;
+}
+
+/* form > button {
+  grid-column: span 1;
+  width: 16rem;
+  margin-left: 5%;
+  font-size: 2rem;
+} */
+
+label {
+  text-align: right;
+  margin: 20px 150px 0px 0;
+}
+
+input{
+  text-align: center;
+  color: black;
+  width: 35%;
+  align-content: stretch;
+  border: solid 2px #B6D0E2;
+  border-radius: 10px;
+}
+
+select {
+  text-align: center;
+  color: black;
+  width: 35%;
+  align-content: stretch;
+  border: solid 2px #B6D0E2;
+  border-radius: 10px;
+}
+
+.prof-btn2 {
+  position: absolute;
+  bottom: 62%;
+  background-color: #B6D0E2;
+  color: black;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-weight: bolder;
+  font-size: 2.2rem;
+  margin: 0 0 0 200px;
+  width: 10%;
+}

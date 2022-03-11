@@ -1,7 +1,6 @@
 form {
   display:grid;
   font-size: 2rem;
-  justify-content: center;
 }
 
 form * {
@@ -19,23 +18,21 @@ form > button {
 }
 
 label {
-  display: block;
+  display: table-cell;
+  text-align: right;
 }
 
-input[type=number] {
+input{
   text-align: center;
+  color: black;
   width: 50%;
   align-content: stretch;
 }
 
-input[type=date] {
-  text-align: center;
-  width: 50%;
-  align-content: stretch;
-}
 
 select {
   text-align: center;
+  color: black;
   width: 50%;
   align-content: stretch;
 }

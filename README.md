@@ -20,6 +20,9 @@ Access Here: https://cb-workout-log.herokuapp.com/
 
 ![Wireframe](public/images/wireframe-workoutapp.png)
 
+## Trello Board
+https://trello.com/b/K7HFF46F/fitness-data-unit-2
+
 ## Screenshots
 
 ![Workouts Page](public/images/workoutapp-homepg.png)

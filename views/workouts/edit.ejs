@@ -7,14 +7,16 @@
   <h1><%= title %> </h1>
     <form action="/workouts/<%= workout._id %>?_method=PUT" method="POST">
       <label>Date:
-        <input type="date" name="date">
+        <input type="date" 
+        name="date" 
+        value="<%= workout.date %>">
       </label>
       <label>Duration(min):
-        <input type="number" name="duration">
+        <input type="number" name="duration" value="<%= workout.duration %>">
       </label>
       <label>Type:
         <select name="method">
-          <option value="" selected></option>
+          <option value="" selected><%= workout.method %></option>
           <option value="Cycling">Cycling</option>
           <option value="Running">Running</option>
           <option value="Swimming">Swimming</option>
@@ -24,10 +26,14 @@
         </select>
       </label>
       <label>AvgHR:
-        <input type="number" name="avgHr">
+        <input type="number" 
+        name="avgHr" 
+        value="<%= workout.avgHr %>">
       </label>
       <label>Cals-Burned:
-        <input type="number" name="calsBurned">
+        <input type="number" 
+        name="calsBurned" 
+        value="<%= workout.calsBurned %>">
       </label>
       <button class="up-btn" type="submit">Update Workout</button>
   </form>

@@ -1,6 +1,7 @@
 # Workout App
 
 Access Here: https://cb-workout-log.herokuapp.com/
+Trello Board: https://trello.com/b/K7HFF46F/fitness-data-unit-2
 
 ## Description
 - An app focused on keeping track of workouts. Users can input specific data about their workouts and create weekly goals for themselves. 
@@ -19,9 +20,6 @@ Access Here: https://cb-workout-log.herokuapp.com/
 ## Wireframe
 
 ![Wireframe](public/images/wireframe-workoutapp.png)
-
-## Trello Board
-https://trello.com/b/K7HFF46F/fitness-data-unit-2
 
 ## Screenshots
 

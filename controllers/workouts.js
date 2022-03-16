@@ -111,12 +111,13 @@ function createCaff(req, res) {
 function deleteCaff(req, res) {
   Workout.findById(req.params.workoutId)
   .then(workout => {
+    if (workout.owner.equals(req.user.profile._id)) {
     workout.caffeine.remove({_id: req.params.caffId})
     workout.save()
     .then(() => {
       res.redirect(`/workouts/${workout._id}`)
     })
-  })
+  }})
   .catch(err => {
     console.log(err)
     res.redirect(`/workouts/${workout._id}`)

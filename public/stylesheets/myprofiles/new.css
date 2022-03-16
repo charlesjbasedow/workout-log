@@ -2,25 +2,17 @@ form {
   display:grid;
 }
 
-
 form * {
   padding: 1px;
   font-size: 2rem;
 }
-
-/* form > button {
-  grid-column: span 1;
-  width: 16rem;
-  margin-left: 5%;
-  font-size: 2rem;
-} */
 
 label {
   text-align: right;
   margin: 20px 150px 0px 0;
 }
 
-input{
+input,select{
   text-align: center;
   color: black;
   width: 35%;
@@ -29,14 +21,6 @@ input{
   border-radius: 12px;
 }
 
-select {
-  text-align: center;
-  color: black;
-  width: 35%;
-  align-content: stretch;
-  border: 2px solid #B6D0E2;
-  border-radius: 12px;
-}
 
 .prof-btn2 {
   position: absolute;

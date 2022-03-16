@@ -17,18 +17,11 @@ table td {
   text-align: center;
 }
 
-
 label {
   text-align: right;
 }
 
-h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  font-style: italic;
-}
-
-h2, h3 {
+h1,h2, h3 {
   font-size: 3rem;
   font-weight: bold;
   font-style: italic;

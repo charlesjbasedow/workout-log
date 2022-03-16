@@ -2,7 +2,6 @@ form {
   display:grid;
 }
 
-
 form * {
   padding: 0px;
   font-size: 2rem;
@@ -13,13 +12,12 @@ h1 {
   font-style: italic;
 }
 
-
 label {
   text-align: right;
   margin: 30px 200px 0 0;
 }
 
-input{
+input,select{
   text-align: center;
   color: black;
   width: 50%;
@@ -28,14 +26,6 @@ input{
   border-radius: 12px;
 }
 
-select {
-  text-align: center;
-  color: black;
-  width: 50%;
-  align-content: stretch;
-  border: 2px solid#B6D0E2;
-  border-radius: 12px;
-}
 
 .addbtn {
   position: absolute;
